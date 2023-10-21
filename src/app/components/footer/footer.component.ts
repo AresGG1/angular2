@@ -14,9 +14,5 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
     this.menuItems = this.menuService.menuItems
   }
-  toggleSelect(menuItem: MenuItem): void {
-    this.menuItems.map((item) => item.isSelected = false)
-    menuItem.isSelected = true
-  }
 
 }

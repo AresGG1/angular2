@@ -16,10 +16,4 @@ export class HeaderComponent implements OnInit {
     this.menuItems = this.menuService.menuItems
   }
 
-  toggleSelect(menuItem: MenuItem) {
-    this.menuItems.map((item) => item.isSelected = false)
-    menuItem.isSelected = true
-
-  }
-
 }

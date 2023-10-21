@@ -3,7 +3,6 @@
     <ng-container *ngFor="let menuItem of menuItems">
       <a class="mx-1"
         [ngClass]="{'bg-blue-200 px-2 rounded': menuItem.isSelected}"
-        (click)="toggleSelect(menuItem)"
         routerLink="{{menuItem.link}}">
         {{menuItem.label}} </a>
     </ng-container>

@@ -24,4 +24,16 @@ export class MenuService {
 
   constructor() { }
 
+  setActive(menuItem?: MenuItem) {
+    if (!menuItem) {
+      return
+    }
+
+    this.menuItems.map((item) => item.isSelected = false)
+    menuItem.isSelected = true
+  }
+
+  findItemByLink(url: string): MenuItem | undefined {
+    return this.menuItems.find((item) => item.link == url)
+  }
 }
