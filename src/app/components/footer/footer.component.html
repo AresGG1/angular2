@@ -1,0 +1,12 @@
+<footer class="fixed bottom-0 bg-gray-100 text-center w-full p-2">
+  <div class="mt-1 flex justify-center">
+    <ng-container *ngFor="let menuItem of menuItems">
+      <a class="mx-1"
+        [ngClass]="{'bg-blue-200 px-2 rounded': menuItem.isSelected}"
+        (click)="toggleSelect(menuItem)"
+        routerLink="{{menuItem.link}}">
+        {{menuItem.label}} </a>
+    </ng-container>
+  </div>
+  <p class="text-gray-600 mt-4">&copy; 2023 Bulba. All rights reserved.</p>
+</footer>

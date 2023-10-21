@@ -1,0 +1,11 @@
+<header class="bg-blue-500 p-6 text-2xl">
+  <nav class="flex space-x-6">
+    <ng-container *ngFor="let menuItem of menuItems">
+      <a
+        [ngClass]="{'bg-blue-400 px-2 rounded': menuItem.isSelected}"
+        (click)="toggleSelect(menuItem)"
+        routerLink="{{menuItem.link}}"
+        class="text-white">{{menuItem.label}} </a>
+    </ng-container>
+  </nav>
+</header>

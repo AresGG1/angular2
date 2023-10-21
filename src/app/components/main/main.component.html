@@ -1,0 +1,10 @@
+<div class="text-center mt-8 text-2xl">
+    <div class="mx-auto">
+
+      <ul *ngFor="let user of users">
+        <li class="mb-2"><a routerLink="{{formLink(user)}}">{{ getFullName(user) }}</a></li>
+
+      </ul>
+
+    </div>
+</div>

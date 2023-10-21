@@ -1,0 +1,9 @@
+<div class="flex justify-center items-center mt-24">
+  <div class="bg-white p-4 rounded shadow-md w-96 text-center">
+    <div class="border-b border-gray-500 mt-4 mb-4">{{ getFullName(user) }}</div>
+    <div class="border-gray-500 mt-4 mb-4">DoB: {{user.dateOfBirth | date : 'dd.MM.yy'}}</div>
+    <div class="border-gray-500 mt-4 mb-4">Salary: {{user.salary | currency : '₴'}}</div>
+    <div class="border-gray-500 mt-4 mb-4">Working hours: {{user.workingHours | workingHours}}</div>
+
+  </div>
+</div>
