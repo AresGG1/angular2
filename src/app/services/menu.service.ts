@@ -9,13 +9,18 @@ export class MenuService {
 
   menuItems: MenuItem[] = [
     {
-      label: 'Home',
+      label: 'Login',
       link: '/',
       isSelected: true
     },
     {
       label: "About",
       link: "/about",
+      isSelected: false
+    },
+    {
+      label: "Users",
+      link: "/users",
       isSelected: false
     }
   ];

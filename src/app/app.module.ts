@@ -12,6 +12,11 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import {RouterModule} from "@angular/router";
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { WorkingHoursPipe } from './pipes/woring-hours.pipe';
+import { LoginComponent } from './components/login/login.component';
+import {FormsModule} from "@angular/forms";
+import {NgOptimizedImage} from "@angular/common";
+import { RoleAvatarDirective } from './directives/role-avatar.directive';
+import { HelloDirective } from './directives/hello.directive';
 
 @NgModule({
   declarations: [
@@ -23,12 +28,17 @@ import { WorkingHoursPipe } from './pipes/woring-hours.pipe';
     PageNotFoundComponent,
     UserProfileComponent,
     WorkingHoursPipe,
+    LoginComponent,
+    RoleAvatarDirective,
+    HelloDirective,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
+    NgOptimizedImage
   ],
   providers: [],
   bootstrap: [AppComponent]

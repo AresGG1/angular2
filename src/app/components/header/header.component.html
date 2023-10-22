@@ -1,10 +1,17 @@
-<header class="bg-blue-500 p-6 text-2xl">
+<header class="bg-blue-500 p-6 text-2xl relative">
   <nav class="flex space-x-6">
     <ng-container *ngFor="let menuItem of menuItems">
       <a
         [ngClass]="{'bg-blue-400 px-2 rounded': menuItem.isSelected}"
         routerLink="{{menuItem.link}}"
-        class="text-white">{{menuItem.label}} </a>
+        class="text-white">{{menuItem.label}}</a>
     </ng-container>
   </nav>
+
+  <div class="absolute top-0 right-0 mt-2 mr-2" *ngIf="!!getLogo()">
+    <div class="flex align-items-center">
+      <div appRoleAvatar [role]="role" class="pt-2 pl-3 pr-3 text-center"></div>
+      <img ngSrc="../../../assets/images/{{getLogo()}}" alt="Your Logo" width="60" height="60">
+    </div>
+  </div>
 </header>

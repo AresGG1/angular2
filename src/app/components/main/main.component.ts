@@ -16,11 +16,11 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
     this.users = this.userService.fetchUsersData()
 
-    const currentComponent = this.menuService.findItemByLink('/')
+    const currentComponent = this.menuService.findItemByLink('/users')
     this.menuService.setActive(currentComponent)
   }
   formLink(user: User) {
-    return `users/${user.id}`
+    return `${user.id}`
   }
   getFullName(user: User) {
     return user.name + ' ' + user.lastName
