@@ -9,7 +9,8 @@ import {UserRole} from "../enums/role";
 })
 export class AuthService {
 
-  private dataSubject = new Subject<UserRole | false>;
+  private dataSubject =
+    new BehaviorSubject<UserRole | false>(localStorage.getItem('role') as UserRole | false);
 
 
   url: string = 'http://localhost:5000/users';
